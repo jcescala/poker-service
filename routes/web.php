@@ -10,5 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'PokerClientController@show');
+Route::group(['middlewareGroups' => 'web'], function () {
+    Route::get('/', 'PokerClientController@show');
+});

@@ -6,5 +6,5 @@
 2. `cp .env.docker .env`
 3. `cd laradock`
 4. `cp env-example .env`
-5. `docker-compose up -d nginx` you must have docker and docker compose installed
+5. `docker-compose up -d nginx redis` you must have docker and docker compose installed
 6. `http://localhost` 

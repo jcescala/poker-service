@@ -27,61 +27,71 @@ class PokerHandScore
         if (self::checkRoyalFlush(self::$handindex)) {
             return array(
                 'hand' => 'Royal Flush',
-                'score' => Config::get('handScore.royal_flush')
+                'score' => Config::get('handScore.royal_flush'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkStraightFlush(self::$handindex)) {
             return array(
                 'hand' => 'Straight Flush',
-                'score' => Config::get('handScore.straight_flush')
+                'score' => Config::get('handScore.straight_flush'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkFourOfAKind(self::$hand)) {
             return array(
                 'hand' => 'Four of a Kind',
-                'score' => Config::get('handScore.four_of_a_kind')
+                'score' => Config::get('handScore.four_of_a_kind'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkFullHouse(self::$hand)) {
             return array(
                 'hand' => 'Full House',
-                'score' => Config::get('handScore.full_house')
+                'score' => Config::get('handScore.full_house'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkFlush(self::$hand)) {
             return array(
                 'hand' => 'Flush',
-                'score' => Config::get('handScore.flush')
+                'score' => Config::get('handScore.flush'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkStraight(self::$handindex)) {
             return array(
                 'hand' => 'Straight',
-                'score' => Config::get('handScore.straight')
+                'score' => Config::get('handScore.straight'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkThreeOfAKind(self::$hand)) {
             return array(
                 'hand' => 'Three of a Kind',
-                'score' => Config::get('handScore.three_of_a_kind')
+                'score' => Config::get('handScore.three_of_a_kind'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkTwoPairs(self::$hand)) {
             return array(
                 'hand' => 'Two Pairs',
-                'score' => Config::get('handScore.two_pairs')
+                'score' => Config::get('handScore.two_pairs'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkOnePair(self::$hand)) {
             return array(
                 'hand' => 'One Pair',
-                'score' => Config::get('handScore.one_pair')
+                'score' => Config::get('handScore.one_pair'),
+                'index' => self::getHandIndex(self::$hand)
             );
         }
         if (self::checkHighCard(self::$hand)) {
             return array(
                 'hand' => 'High Card',
-                'score' => Config::get('handScore.high_card')
+                'score' => Config::get('handScore.high_card'),
+                'index' => self::getHandIndex(self::$hand)
             );
         } else {
             return array(
